@@ -14,10 +14,9 @@ import java.awt.Frame;
 public class Ventana extends Frame {
     
 
-    public Ventana(String titulo, int ancho, int alto, int x, int y) {
+    public Ventana(String titulo, int ancho, int alto) {
         this.setTitle(titulo);
         this.setSize(ancho, alto);
-        this.setLocation(x, y);
         this.setVisible(true);
     }
 

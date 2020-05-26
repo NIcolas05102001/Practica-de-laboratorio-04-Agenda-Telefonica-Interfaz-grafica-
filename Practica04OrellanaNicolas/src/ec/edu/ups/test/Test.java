@@ -6,6 +6,7 @@
 package ec.edu.ups.test;
 
 import ec.edu.ups.ventana.Ventana;
+import ec.edu.ups.ventana.Ventanas;
 import java.awt.Button;
 import java.awt.Frame;
 import java.awt.GridLayout;
@@ -19,43 +20,11 @@ import java.awt.Panel;
 public class Test {
 
     public static void main(String[] args) {
-
-        Ventana v = new Ventana("Usuario", 600, 400, 250, 0);
-        //Ventana v1 = new Ventana("sakdj", 600, 400, 850, 0);
-
-        Panel pv = new Panel();
-
-        GridLayout Matriz = new GridLayout(4, 3);
-        Button[] botones = new Button[2];
-        Label [] labels = new Label[10];
-        labels[0] = new Label("Bienvenido");
-        for(int i = 1; i < 10; i++){
-            labels[i] = new Label("");
-        }
-        botones[0] = new Button("Registrarse");
-        botones[1] = new Button("Iniciar sesion");
         
+        Ventanas v = new Ventanas();
         
-        pv.setLayout(Matriz);
-        for(int i = 0; i < 4; i++){
-            pv.add(labels[i]);
-        }
+        v.ventana1();
         
-        
-            pv.add(botones[0]);
-        
-        
-        
-        for(int i = 6; i < 8; i++){
-            pv.add(labels[i]);
-        }
-        
-        pv.add(botones[1]);
-        
-        for(int i = 8; i < 10; i++){
-            pv.add(labels[i]);
-        }
-
-        v.add(pv);
+        v.ventana2();
     }
 }
