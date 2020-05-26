@@ -20,15 +20,21 @@ import java.awt.Panel;
 public class Test {
 
     public static void main(String[] args) {
-        
+
         Ventanas v = new Ventanas();
-        
-        v.ventana4();
-        
-        v.ventana3();
-        
-        v.ventana2();
-        
+
         v.ventana1();
+
+        v.ventana2();
+
+        v.ventana3();
+
+        v.ventana4();
+
+        v.ventana5();
+
+        v.ventana6();
+
+        v.ventana7();
     }
 }

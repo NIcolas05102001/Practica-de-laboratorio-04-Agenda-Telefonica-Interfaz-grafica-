@@ -17,6 +17,7 @@ public class Ventana extends Frame {
     public Ventana(String titulo, int ancho, int alto) {
         this.setTitle(titulo);
         this.setSize(ancho, alto);
+        this.setLocation(600, 100);
         this.setVisible(true);
     }
 
