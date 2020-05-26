@@ -145,7 +145,57 @@ public class Ventanas {
     }
 
     public void ventana3() {
-
+        
+        Ventana v = new Ventana("Inicio de sesion", 600, 400);
+        
+        Panel p = new Panel();
+        
+        Label l = new Label("Correo");
+        Label l1 = new Label("Contraseña");
+        
+        TextField t = new TextField(30);
+        TextField t1 = new TextField(10);
+        
+        Panel pp = new Panel();
+        Panel pi = new Panel();
+        Panel pd = new Panel();
+        
+        pi.add(l);
+        pd.add(t);
+        
+        pp.add(pi);
+        pp.add(pd);
+        
+        Panel pp1 = new Panel();
+        Panel pi1 = new Panel();
+        Panel pd1 = new Panel();
+        
+        pi1.add(l1);
+        pd1.add(t1);
+        
+        pp1.add(pi1);
+        pp1.add(pd1);
+        
+        GridLayout m = new GridLayout(3,1);
+        
+        Panel[] panels = new Panel[2];
+        Button[] buttons = new Button[1];
+        
+        panels[0] = pp;
+        panels[1] = pp1;
+       
+        buttons[0] = new Button("Iniciar sesion");
+        
+        for(int i = 0; i < 2; i++){
+            p.add(panels[i]);
+        }
+        
+        p.add(buttons[0]);
+        
+        p.setLayout(m);
+        
+        v.add(p);
+        
     }
 
     public void ventana4() {

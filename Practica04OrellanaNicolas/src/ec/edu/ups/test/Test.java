@@ -23,8 +23,10 @@ public class Test {
         
         Ventanas v = new Ventanas();
         
-        v.ventana1();
+        v.ventana3();
         
         v.ventana2();
+        
+        v.ventana1();
     }
 }
