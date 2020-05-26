@@ -5,6 +5,7 @@
  */
 package ec.edu.ups.ventana;
 
+import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.GridLayout;
 import java.awt.Label;
@@ -199,6 +200,63 @@ public class Ventanas {
     }
 
     public void ventana4() {
+        
+        Ventana v = new Ventana("Telefono", 600, 400);
+        
+        Panel p = new Panel();
+        Panel PanelNorte = new Panel();
+        Panel PanelSur = new Panel();
+        Panel PanelCentro = new Panel();
+        
+        BorderLayout borderLayout = new BorderLayout();
+        
+        GridLayout m = new GridLayout(2, 2);
+        
+        TextField t = new TextField(3);
+        
+        Button b = new Button("Opciones");
+        Button b1 = new Button("Buscar");
+        
+        Label[] labels = new Label[2];
+        
+        labels[0] = new Label("");
+        labels[1] = new Label("Codigo Telefono");
+        
+        PanelNorte.add(labels[0]);
+        PanelNorte.add(b);
+        PanelNorte.add(labels[1]);
+        PanelNorte.add(t);
+        
+        PanelNorte.setLayout(m);
+        
+        PanelCentro.add(b1);
+        
+        GridLayout m1 = new GridLayout(4, 2);
+        
+        Label[] labels1 = new Label[8];
+        
+        labels1[0] = new Label("Codigo: ");
+        labels1[1] = new Label("1");
+        labels1[2] = new Label("Numero: ");
+        labels1[3] = new Label("0994572136");
+        labels1[4] = new Label("Tipo: ");
+        labels1[5] = new Label("Movil");
+        labels1[6] = new Label("Operadora: ");
+        labels1[7] = new Label("Claro");
+        
+        for (int i = 0; i < 8; i++) {
+            PanelSur.add(labels1[i]);
+        }
+        
+        PanelSur.setLayout(m1);
+        
+        p.setLayout(borderLayout);
+        
+        v.add(p);
+        
+        p.add(PanelNorte, BorderLayout.NORTH);
+        p.add(PanelCentro, BorderLayout.CENTER);
+        p.add(PanelSur, BorderLayout.SOUTH);
 
     }
 
