@@ -329,6 +329,52 @@ public class Ventanas {
     }
 
     public void ventana7() {
-
+        Ventana v = new Ventana("Eliminar codigo", 600, 400);
+        
+        Panel p = new Panel();
+        
+        GridLayout m = new GridLayout(5, 2);
+        
+        Label[] labels = new Label[7];
+        
+        Button[] buttons = new Button[2];
+        
+        for (int i = 0; i < 2; i++) {
+            labels[i] = new Label("");
+        }
+        
+        labels[2] = new Label("Codigo");
+        
+        for (int i = 3; i < 7; i++) {
+            labels[i] = new Label("");
+        }
+        
+        buttons[0] = new Button("Eliminar");
+        buttons[1] = new Button("volver");
+        
+        for (int i = 0; i < 2; i++) {
+            p.add(labels[i]);
+        }
+        
+        TextField t = new TextField(10);
+        
+        p.add(labels[2]);
+        p.add(t);
+        
+        for(int i = 3; i < 5; i++){
+            p.add(labels[i]);
+        }
+        
+        p.add(buttons[0]);
+        p.add(buttons[1]);
+        
+        for (int i = 5; i < 7; i++) {
+            p.add(labels[i]);
+        }
+        
+        p.setLayout(m);
+        
+        v.add(p);
     }
+    
 }
